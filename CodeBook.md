@@ -1,6 +1,6 @@
 # Code book
 
-## Data cleaning process
+## Transformations from the raw to the tidy data set
 
 The following steps were taken to process the raw data set, in order to get a tidy data set for further data analysis:
 
@@ -10,6 +10,10 @@ The following steps were taken to process the raw data set, in order to get a ti
 4. Appropriately label the data set with descriptive variable names.
 5. From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
 6. Export tidy data as text file.
+
+## Data overview
+
+The tidy data set contains 180 observations (30 subjects * 6 activities) with 68 variables (see *Variables*).
 
 
 ## Variables
