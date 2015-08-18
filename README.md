@@ -1,6 +1,14 @@
 # README
 
-## Files
+## Acknowledgement
+
+Information about the raw data set that has been used in this course project is available [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) and in the following publication:  
+
+Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012  
+
+Information - including the description of the various files and variables - about the raw data set is available in the README.txt that comes with the raw data set which was download from [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
+
+## Files in this repository
 
 * *CodeBook.md*  
   Code book describing the transformations from the raw to the tidy data set and all variables in the tidy data set.  
