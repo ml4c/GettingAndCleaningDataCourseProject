@@ -9,7 +9,7 @@
   This file.  
   
 * *run_analysis.R*  
-  R code with all transformations from the raw to the tidy data set. The script performs the following steps:
+  R code with all transformations from the raw to the tidy data set. The script performs the following steps (see code and comments in the R file for details):
     1. Merge the training and the test sets to create one data set.
     2. Extract only the measurements on the mean and standard deviation for each measurement.
     3. Use descriptive activity names to name the activities in the data set.
