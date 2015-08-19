@@ -1,35 +1,3 @@
-## Set working directory
-## ! Remove after development !
-
-setwd("C:/_Data/Documents/R/CourseraGettingAndCleaningData/GettingAndCleaningDataCourseProject")
-
-
-## Clear environment and console
-## ! Remove after development !
-
-rm(list = ls())
-cat("\014")
-
-
-## dplyr
-##
-## select: return a subset of the columns of a data frame
-##
-## filter: extract a subset of rows from a data frame based on
-## logical conditions
-##
-## arrange: reorder rows of a data frame
-##
-## rename: rename variables in a data frame
-##
-## mutate: add new variables/columns or transform existing
-## variables
-##
-## summarise / summarize: generate summary statistics of
-## different variables in the data frame, possibly within strata
-##
-
-
 ## This script does the following:
 ##
 ## 1. Merges the training and the test sets to create one data set.
@@ -90,7 +58,6 @@ df <- df[, grepl("Subject|ActivityNumber|mean|std", names(df))]
 ## statement.
 
 df <- df[, !grepl("meanFreq", names(df))]
-
 
 
 ## 3. Use descriptive activity names to name the activities in the data set.
@@ -162,35 +129,7 @@ names(tidy_df) <- names(tidy_df) %>%
 write.table(tidy_df, "tidydata.txt", sep="\t", row.names = FALSE, quote = FALSE)
 
 
-## Create variable list (including variable type and description) for code book
-
-var_names <- names(tidy_df)
-var_types <- sapply(tidy_df, class)
-var_description <- var_names
-var_description <- gsub("Subject", "Subject ID", var_description)
-var_description <- gsub("Activity", "Activity name", var_description)
-var_description <- gsub("AverageTimeBody", "The average of the time of the body ", var_description)
-var_description <- gsub("AverageTimeGravity", "The average of the time of the gravity ", var_description)
-var_description <- gsub("AverageFrequencyBody", "The average of the frequency of the body ", var_description)
-var_description <- gsub("AccelerationJerk", "jerk acceleration ", var_description)
-var_description <- gsub("Acceleration", "acceleration ", var_description)
-var_description <- gsub("GyroscopeJerk", "jerk gyroscope ", var_description)
-var_description <- gsub("Gyroscope", "gyroscope ", var_description)
-var_description <- gsub("Magnitude", "magnitude ", var_description)
-var_description <- gsub("Mean$", "mean values", var_description)
-var_description <- gsub("Mean", "mean values of ", var_description)
-var_description <- gsub("StandardDeviation$", "standard deviations", var_description)
-var_description <- gsub("StandardDeviation", "standard deviations of ", var_description)
-codebook <- paste("* Name: _", var_names, "_  \n  ", "Class: _", var_types, "_  \n  ", "Description: _", var_description, "_  \n", sep = "")
-codebook <- c(c("## Variables  \n"), codebook)
-write.table(codebook, "CodeBook_Variables.md", quote = FALSE, row.names = FALSE, col.names = FALSE)
-rm("var_names")
-rm("var_types")
-rm("var_description")
-rm("codebook")
-
-
-## Remove data sets from the R environment
+## Remove data sets from the R environment to free up computer memory
 
 rm("df")
 rm("tidy_df")
