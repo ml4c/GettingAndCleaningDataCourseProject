@@ -6,7 +6,7 @@
 ## 4. Appropriately labels the data set with descriptive variable names.
 ## 5. From the data set in step 4, creates a second, independent tidy data set with the
 ##    average of each variable for each activity and each subject.
-## 6. Export tidy data as text file.
+## 6. Exports tidy data as text file (with <tab>-separated columns).
 
 
 ## 1. Merge the training and the test sets to create one data set.
@@ -124,7 +124,7 @@ names(tidy_df) <- names(tidy_df) %>%
                         str_replace_all("^Frequency", "AverageFrequency")
 
 
-## 6. Export tidy data as text file (columns are <tab>-separated).
+## 6. Export tidy data as text file (with <tab>-separated columns).
 
 write.table(tidy_df, "tidydata.txt", sep="\t", row.names = FALSE, quote = FALSE)
 

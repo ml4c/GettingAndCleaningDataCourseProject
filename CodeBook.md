@@ -9,7 +9,7 @@ The following steps were taken to process the raw data set, in order to get a ti
 3. Use descriptive activity names to name the activities in the data set.
 4. Appropriately label the data set with descriptive variable names.
 5. From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
-6. Export tidy data as text file. Columns are `<tab>`-separated.
+6. Export tidy data as text file (with `<tab>`-separated columns).
 
 ## Data overview
 
