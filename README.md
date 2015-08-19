@@ -26,4 +26,4 @@ Information - including the description of the various files and variables - abo
     6. Export tidy data as text file.
   
 * *tidydata.txt*  
-  Text file containing the tidy data set.  
+  Text file containing the tidy data set. Columns are `<tab>`-separated.  
